@@ -13,3 +13,5 @@
     Height: <%= @user.height %>
   </li>
 </ul>
+
+<%= link_to("Log Out", session_destroy_path, :method => "delete") %>

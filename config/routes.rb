@@ -4,4 +4,5 @@ Rails.application.routes.draw do
 
   get '/signin', to: 'session#new'
   post 'session', to: 'session#create'
+  delete '/users/:id/logout', to: 'session#destroy', as: 'session_destroy'
 end
