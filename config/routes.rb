@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
   root 'welcome#home'
-  get '/users/new', to: 'users#new'
-  post '/users/new'
+  resources :users, only: [:new, :create]
 end
