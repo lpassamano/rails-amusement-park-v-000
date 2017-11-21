@@ -13,4 +13,12 @@ class AttractionsController < ApplicationController
     flash[:ride_message] = @ride.take_ride
     redirect_to user_path(session[:user_id])
   end
+
+  def new
+    @attraction = Attraction.new 
+  end
+
+  def create
+
+  end
 end
