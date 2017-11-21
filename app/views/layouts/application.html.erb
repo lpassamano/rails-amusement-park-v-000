@@ -23,7 +23,15 @@
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
-
+            <li>
+              <%= link_to "View Attractions", attractions_path %>
+            </li>
+            <li>
+              <%= link_to "View Profile", user_path(current_user) if current_user %>
+            </li>
+            <li>
+              <%= link_to("Log Out", session_destroy_path(current_user), :method => "delete") if current_user %>
+            </li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
