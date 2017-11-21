@@ -23,6 +23,14 @@ class AttractionsController < ApplicationController
     redirect_to attraction_path(@attraction)
   end
 
+  def edit
+    @attraction = Attraction.find(params[:id])
+  end
+
+  def update
+
+  end
+
   private
 
   def attraction_params
