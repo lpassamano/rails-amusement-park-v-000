@@ -1,0 +1,6 @@
+<h1><%= @attraction.name %></h1>
+
+<%= form_for @attraction, :url => ride_attraction_path(@attraction), :method => "POST" do |f| %>
+  <form action="/attractions/<%= @attraction.id %>/ride", method="POST">
+  <%= f.submit "Go on this ride" %>
+<% end %>

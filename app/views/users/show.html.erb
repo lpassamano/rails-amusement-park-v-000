@@ -2,6 +2,8 @@
 
 <%= 'ADMIN' if @user.admin %>
 
+<h3><%= flash[:ride_message] %></h3>
+
 <ul>
   <li>
     Mood: <%= @user.mood %>

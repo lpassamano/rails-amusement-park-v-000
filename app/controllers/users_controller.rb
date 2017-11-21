@@ -14,6 +14,7 @@ class UsersController < ApplicationController
   def show
     if session[:user_id].present?
       @user = User.find(params[:id])
+      @message = session[:ride_message]
     else
       redirect_to root_path
     end
